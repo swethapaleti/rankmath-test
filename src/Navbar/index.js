@@ -6,6 +6,10 @@ import { CgEditFlipH } from "react-icons/cg";
 import { GoNote } from "react-icons/go";
 import { LuShare } from "react-icons/lu";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
+import { PiFolderMinusFill } from "react-icons/pi";
+import { MdExplore } from "react-icons/md";
+import { MdNotifications } from "react-icons/md";
+import { IoMdSettings } from "react-icons/io";
 
 const listofMenuItems = [
   { text: "Edit", icon: CgEditFlipH },
@@ -18,14 +22,21 @@ const Navbar = () => {
   const [isMenuOpen, toggleMenu] = useState(false);
   return (
     <>
-      <nav className="flex w-full p-5 text-center bg-white place-items-center">
+      <nav className="flex w-full p-5 text-center bg-white rounded-md place-items-center">
         <MdOutlineArrowBackIosNew className="text-2xl text-gray-500" />
         <p className="w-full font-sans font-semibold justify-self-center md:text-4xl">
           Bitcoin Wallet
         </p>
+        <div className="flex space-x-4">
+        <PiFolderMinusFill className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
+        <MdExplore className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
+        <MdNotifications className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
+        <IoMdSettings className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
+        </div>
         <button onClick={() => toggleMenu(!isMenuOpen)}>
           <CiMenuKebab className="text-3xl" />
         </button>
+
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -36,7 +47,6 @@ const Navbar = () => {
                 ease: "linear",
                 duration: 0.5,
               }}
-              
               className="absolute flex flex-col right-3 top-20 place-items-end"
             >
               <div className="w-48 px-4 pt-2 pb-3 space-y-1 bg-white border rounded-lg">
