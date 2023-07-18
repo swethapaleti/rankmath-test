@@ -6,7 +6,7 @@ const BitcoinCard = () => {
   const [isArrowDown, showInfo] = useState(false);
 
   return (
-    <div className="w-5/6 min-w-[300px] shadow-md px-4 py-2 m-auto mt-4 bg-white rounded-lg shadow-md md:mx-4 md:w-1/2 md:px-8">
+    <div className="w-full px-4 py-6 mx-auto mt-4 bg-white rounded-lg shadow-md md:w-1/2 md:px-8">
       <div className="flex justify-between w-full place-items-center">
         <div className="flex space-x-8 place-items-center">
           <img className="w-16" src="bitcoin.svg" alt="bitcoin" />

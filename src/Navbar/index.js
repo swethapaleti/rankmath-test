@@ -27,7 +27,7 @@ const Navbar = () => {
         <p className="w-full font-sans font-semibold justify-self-center md:text-4xl">
           Bitcoin Wallet
         </p>
-        <div className="flex space-x-4">
+        <div className="hidden space-x-4 md:flex">
         <PiFolderMinusFill className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
         <MdExplore className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
         <MdNotifications className="text-3xl text-gray-400 transition-colors hover:duration-500 hover:text-black" />
