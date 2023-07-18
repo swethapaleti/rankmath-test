@@ -20,10 +20,9 @@ const Navbar = () => {
         <button onClick={() => toggleMenu(!isMenuOpen)}>
           <CiMenuKebab className="text-3xl transition duration-300 ease-out"/>
         </button>
-      </nav>
       {isMenuOpen && (
-        <div className="flex flex-col mt-2 place-items-end">
-          <div className="w-1/2 px-4 pt-2 pb-3 space-y-1 bg-white border rounded-lg lg:w-1/5">
+        <div className="absolute flex flex-col right-3 top-20 place-items-end">
+          <div className="w-48 px-4 pt-2 pb-3 space-y-1 bg-white border rounded-lg">
            {listofMenuItems.map(each=>(
             <div key={each.text} className="flex justify-between py-2 text-base font-medium transition-colors border-b border-gray-300 cursor-pointer last:border-none place-items-center selection:px-3 hover:text-red-500 hover:font-bold hover:duration-700">
             <p>{each.text}</p>
@@ -33,6 +32,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      </nav>
     </>
   );
 };
