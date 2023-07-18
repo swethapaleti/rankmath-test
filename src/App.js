@@ -1,5 +1,7 @@
-function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}
+import BitcoinWallet from "./BitcoinWallet";
+
+const App = () =>(
+  <BitcoinWallet/>
+)
 
 export default App;
